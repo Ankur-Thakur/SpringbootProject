@@ -15,7 +15,9 @@ public class Endpoints {
     @GetMapping("path/api/v1/{id}")
     public String getMethodName(@RequestParam String abc, @PathVariable String id) {
 
-        return new String(abc+" "+ id);
+        return abc+" "+ id;
+
+        
     }
     
     @PostMapping("post/")
@@ -24,5 +26,12 @@ public class Endpoints {
         
         return entity;
     }
+
+    @GetMapping("path/v2")
+    public String getMethodName() {
+        return "v2";
+        
+    }
+    
     
 }
